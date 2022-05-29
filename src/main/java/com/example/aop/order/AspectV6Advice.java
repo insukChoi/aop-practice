@@ -1,4 +1,4 @@
-package com.example.aop.order.aop;
+package com.example.aop.order;
 
 
 import lombok.extern.slf4j.Slf4j;
@@ -30,22 +30,22 @@ public class AspectV6Advice {
 //        }
 //    }
 
-    @Before("com.example.aop.order.aop.PointCuts.orderAndService()")
+    @Before("com.example.aop.order.PointCuts.orderAndService()")
     public void doBefore(JoinPoint joinPoint) {
         log.info("[before] {}", joinPoint.getSignature());
     }
 
-    @AfterReturning(value = "com.example.aop.order.aop.PointCuts.orderAndService()", returning = "result")
+    @AfterReturning(value = "com.example.aop.order.PointCuts.orderAndService()", returning = "result")
     public void doReturn(JoinPoint joinPoint, Object result) {
         log.info("[return] {} result={}", joinPoint.getSignature(), result);
     }
 
-    @AfterThrowing(value = "com.example.aop.order.aop.PointCuts.orderAndService()", throwing = "ex")
+    @AfterThrowing(value = "com.example.aop.order.PointCuts.orderAndService()", throwing = "ex")
     public void doThrowing(JoinPoint joinPoint, Exception ex) {
         log.info("[ex] {} message={}", joinPoint.getSignature(), ex);
     }
 
-    @After(value = "com.example.aop.order.aop.PointCuts.orderAndService()")
+    @After(value = "com.example.aop.order.PointCuts.orderAndService()")
     public void doAfter(JoinPoint joinPoint) {
         log.info("[after] {}", joinPoint.getSignature());
     }

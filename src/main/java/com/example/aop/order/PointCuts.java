@@ -1,4 +1,4 @@
-package com.example.aop.order.aop;
+package com.example.aop.order;
 
 import org.aspectj.lang.annotation.Pointcut;
 

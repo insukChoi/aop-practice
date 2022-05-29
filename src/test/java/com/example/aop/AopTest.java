@@ -2,9 +2,7 @@ package com.example.aop;
 
 import com.example.aop.order.OrderRepository;
 import com.example.aop.order.OrderService;
-import com.example.aop.order.aop.AspectV3;
-import com.example.aop.order.aop.AspectV4Pointcut;
-import com.example.aop.order.aop.AspectV6Advice;
+import com.example.aop.order.AspectV6Advice;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.aop.support.AopUtils;

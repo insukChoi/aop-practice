@@ -1,4 +1,4 @@
-package com.example.aop.order.aop;
+package com.example.aop.order;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
